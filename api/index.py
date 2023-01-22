@@ -12,6 +12,6 @@ def about():
 
 @app.route('/test')
 def test():
-    with open('../index.html', 'r') as f:
+    with open('index.html', 'r') as f:
         data = f.read()
     return data
