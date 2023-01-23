@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <style type="text/css">
+      .tdhover {
+        position: relative;
+      }
+      .spanhover {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        border: 1px;
+        background-color: white;
+        padding: 3px;
+        color: red;
+        top: 0%;
+        left: 50%;
+      }
+
+      .container-xxl {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      table.table tbody tr:hover td span.spanhover {
+        display: inline-block;
+      }
+
+      .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      .tg td {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+      .tg th {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+      .tg .tg-0lax {
+        text-align: left;
+        vertical-align: top;
+      }
+      .black-border-left {
+        border-left: 1px solid rgb(0, 0, 0);
+      }
+      .grey-border-left {
+        border-left: 1px solid rgb(222, 226, 230);
+      }
+
+      .custom-control-input {
+        width: 25px;
+      }
+
+      .table tbody tr.highlight td {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Belgische Wiest</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="navbar-form navbar-right" role="search">
+            <input
+              type="text"
+              name=""
+              value=""
+              id="username"
+              placeholder="Player Name"
+            />
+            <input type="button" id="addPlayer" value="add" />
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-xxl">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Cards</th>
+            <th colspan="3">Johnny</th>
+            <th colspan="3">Betty</th>
+            <th colspan="3">Bobby</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tdhover">
+              1
+              <span class="spanhover">
+                <button type="button" class="btn btn-outline-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pencil-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+                    ></path>
+                  </svg>
+                </button>
+                <button type="button" class="btn btn-outline-danger">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-trash3-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </td>
+            <td>1</td>
+            <td class="grey-border-left">0</td>
+            <td>0</td>
+            <td>0</td>
+            <td class="grey-border-left">1</td>
+            <td>1</td>
+            <td>1</td>
+            <td class="grey-border-left">1</td>
+            <td>0</td>
+            <td>-1</td>
+          </tr>
+          <tr>
+            <td class="tdhover">
+              2
+              <span class="spanhover">
+                <button type="button" class="btn btn-outline-primary btn-sm">
+                  Edit
+                </button>
+              </span>
+            </td>
+            <td>2</td>
+            <td class="grey-border-left">0</td>
+            <td>0</td>
+            <td>0</td>
+            <td class="grey-border-left">2</td>
+            <td>1</td>
+            <td>0</td>
+            <td class="grey-border-left">1</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+        <tfoot class="text-center table-borderless">
+          <form>
+            <tr>
+              <th>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="round"
+                    placeholder="Round"
+                  />
+                </div>
+              </th>
+              <th>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="cards"
+                    placeholder="Cards"
+                  />
+                </div>
+              </th>
+              <th colspan="3">
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="johnny"
+                    placeholder="Johnny"
+                  />
+                </div>
+              </th>
+              <th colspan="3">
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="betty"
+                    placeholder="Betty"
+                  />
+                </div>
+              </th>
+              <th colspan="3">
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="bobby"
+                    placeholder="Bobby"
+                  />
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th colspan="11">
+                <div class="form-check">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Guess</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Result</label
+                    >
+                  </div>
+                  <input class="btn btn-primary" type="submit" value="Submit" />
+                </div>
+              </th>
+            </tr>
+          </form>
+        </tfoot>
+      </table>
+      <button type="button" class="btn btn-outline-primary">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-pencil-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+          ></path>
+        </svg>
+      </button>
+      <button type="button" class="btn btn-outline-danger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-trash3-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
