@@ -10,7 +10,7 @@ def home():
         else:
             game_code = request.form['game_code']
             print(f"Join game: {game_code}")
-    with open('index.html', 'r') as f:
+    with open('api/index.html', 'r') as f:
         data = f.read()
     return data
 
@@ -20,7 +20,7 @@ def about():
 
 @app.route('/game')
 def test():
-    with open('game.html', 'r') as f:
+    with open('api/game.html', 'r') as f:
         data = f.read()
     return data
 
